@@ -24,3 +24,20 @@ Type node and run the following steps in node console
     byteCode = compiledCode.contracts[':Valid'].bytecode
   	deployedContract = ValidContract.new({data: byteCode, from: web3.eth.accounts[0], gas: 4700000})
 	deployedContract.address
+    
+In the index.js file, update the
+
+	contractInstance = ValidContract.at('0x1955399de1a8583f651977c7e197adbb44e3df96');
+    
+with new contact address. 
+
+In another terminal, run 
+
+	sudo mongod --replSet=bigchain-rs
+    
+Then start BigchainDB in another terminal
+
+	bigchaindb start
+    
+Now start the UI by double clicking index.html ..
+
